@@ -23,4 +23,20 @@ public class RemoveDuplicatesFromSortedArray {
         return k;
     }
 
+    /*
+        Link to the problem #2: https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/?envType=study-plan-v2&envId=top-interview-150
+    */
+    public int removeDuplicate(int[] array){
+        //The logic of this problem is exactly the same as with the previous one, except that we ignore the first duplicate instance of each number
+        if(array.length<=2) return array.length;
+        int k = 2;
+        for(int i = 2; i < array.length; i++){
+            if(array[i] != array[k-2]){
+                array[k] = array[i];
+                k++;
+            }
+        }
+        return k;
+    }
+
 }
