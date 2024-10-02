@@ -4,7 +4,6 @@ public class RemoveElement {
     /*
         Link to the problem: https://leetcode.com/problems/remove-element/description/?envType=study-plan-v2&envId=top-interview-150
     */
-
     public int removeElement(int[] array, int val) {
         int count = 0; // Counter for elements that are not equal to 'val'
 
@@ -17,4 +16,5 @@ public class RemoveElement {
         }
         return count; // Return the count of valid elements
     }
+
 }
